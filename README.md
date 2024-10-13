@@ -2,9 +2,9 @@
 
 The goal of Continual Learning is to improve the model based on experience and keep it updated to changes. 
 
-A datastream $S$ is split into experiences. Each experience $e_i$ consists of a large batch of samples $D_i$, where $D_i$ is usually split into $D_i^train$ and $D_i^test$.
+A datastream $S$ is split into experiences. Each experience $e_i$ consists of a large batch of samples $D_i$, where $D_i$ is usually split into $D_i^(train)$ and $D_i^(test)$.
 
-The goal is to optimize the loss computed on the different $D_i^test$ over the entire data stream, in order to avoid **Catarstrophic forgetting**. Training on new experiences should not reduce performance on previously learned experiences.
+The goal is to optimize the loss computed on the different $D_i^(test)$ over the entire data stream, in order to avoid **Catarstrophic forgetting**. Training on new experiences should not reduce performance on previously learned experiences.
 
 This project uses the standard **MNIST benchmark** to compare different Continual Learning strategies:
 - **Naive Strategy (Base Strategy):** simply continue the backpropagation process on the new tasks (prone to forgetting)
